@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Medicine Reminder</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <h1>Medicine Reminder</h1>
+
+  <div class="box">
+    <input type="text" id="medicineName" placeholder="Enter medicine name">
+    <input type="time" id="medicineTime">
+
+    <div class="button-group">
+      <button onclick="addMedicine()">Add Medicine</button>
+      <button onclick="testSound()" class="test-btn">Test Sound</button>
+    </div>
+  </div>
+
+  <section>
+    <h2>Medicine List</h2>
+    <ul id="medicineList"></ul>
+  </section>
+
+  <section class="logs-section">
+    <h2>Daily Logs</h2>
+    <ul id="dailyLogs"></ul>
+  </section>
+
+  <script src="script.js"></script>
+</body>
+</html>

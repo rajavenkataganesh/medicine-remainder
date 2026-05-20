@@ -1,0 +1,247 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  min-height: 100vh;
+  margin: 0;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #b8f2e6 0%, #cfe8ff 30%, #ffe0f0 65%, #fff4b8 100%);
+  background-attachment: fixed;
+}
+
+h1 {
+  text-align: center;
+  color: #1e4d59;
+  font-size: 38px;
+  margin-bottom: 25px;
+  text-shadow: 0 2px 8px rgba(255, 255, 255, 0.5);
+}
+
+h2 {
+  text-align: center;
+  color: #245f52;
+  margin-top: 30px;
+  margin-bottom: 15px;
+  font-size: 26px;
+}
+
+.box {
+  width: 100%;
+  max-width: 430px;
+  margin: 0 auto;
+  padding: 25px;
+  border-radius: 20px;
+  background: rgba(255, 255, 255, 0.65);
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  box-shadow: 0 10px 30px rgba(26, 77, 61, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.5);
+}
+
+input {
+  width: 100%;
+  padding: 13px 15px;
+  margin-bottom: 15px;
+  border: 1px solid #b7ddd0;
+  border-radius: 12px;
+  font-size: 15px;
+  outline: none;
+  background: rgba(255, 255, 255, 0.85);
+  color: #20473e;
+  transition: all 0.3s ease;
+}
+
+input:focus {
+  border-color: #3ca38a;
+  box-shadow: 0 0 0 4px rgba(60, 163, 138, 0.15);
+}
+
+.button-group {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 5px;
+}
+
+.button-group button {
+  width: 100%;
+}
+
+button {
+  border: none;
+  border-radius: 12px;
+  padding: 12px 14px;
+  font-size: 15px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  color: white;
+}
+
+.button-group button:first-child {
+  background: linear-gradient(135deg, #2f9d7e, #1f7a64);
+  box-shadow: 0 8px 18px rgba(47, 157, 126, 0.25);
+}
+
+.button-group button:first-child:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+.test-btn {
+  background: linear-gradient(135deg, #4a90e2, #6a5acd);
+  box-shadow: 0 8px 18px rgba(74, 144, 226, 0.25);
+}
+
+.test-btn:hover {
+  transform: translateY(-2px);
+  opacity: 0.96;
+}
+
+#medicineList,
+#dailyLogs {
+  width: 100%;
+  max-width: 750px;
+  margin: 20px auto 0;
+  padding: 0;
+}
+
+#medicineList li,
+#dailyLogs li {
+  list-style: none;
+  margin-bottom: 14px;
+  padding: 16px;
+  border-radius: 18px;
+  background: rgba(255, 255, 255, 0.72);
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+  box-shadow: 0 8px 20px rgba(20, 60, 50, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.45);
+}
+
+#medicineList li {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 10px;
+}
+
+#medicineList li span {
+  flex: 1;
+  min-width: 180px;
+  font-size: 16px;
+  color: #24463f;
+  font-weight: 600;
+}
+
+#medicineList li button {
+  padding: 9px 13px;
+  border-radius: 10px;
+  font-size: 13px;
+}
+
+#medicineList li button:nth-child(2) {
+  background: #2fa85f;
+}
+
+#medicineList li button:nth-child(2):hover {
+  background: #23874a;
+}
+
+#medicineList li button:nth-child(3) {
+  background: #f0ad2c;
+}
+
+#medicineList li button:nth-child(3):hover {
+  background: #d49418;
+}
+
+#medicineList li button:nth-child(4) {
+  background: #e05757;
+}
+
+#medicineList li button:nth-child(4):hover {
+  background: #c94040;
+}
+
+.logs-section {
+  width: 100%;
+  max-width: 750px;
+  margin: 30px auto 0;
+}
+
+#dailyLogs li {
+  color: #23443d;
+  font-size: 15px;
+  border-left: 5px solid #2f9d7e;
+}
+
+section {
+  margin-top: 10px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding: 25px 14px;
+  }
+
+  h1 {
+    font-size: 30px;
+  }
+
+  h2 {
+    font-size: 22px;
+  }
+
+  .box {
+    padding: 20px;
+  }
+
+  #medicineList li {
+    flex-direction: column;
+    align-items: stretch;
+  }
+
+  #medicineList li span {
+    width: 100%;
+  }
+
+  #medicineList li button {
+    width: 100%;
+  }
+}
+
+@media (max-width: 480px) {
+  body {
+    padding: 18px 10px;
+  }
+
+  h1 {
+    font-size: 26px;
+  }
+
+  .box {
+    border-radius: 16px;
+    padding: 18px;
+  }
+
+  input {
+    font-size: 14px;
+    padding: 12px;
+  }
+
+  button {
+    font-size: 14px;
+    padding: 11px 12px;
+  }
+
+  #medicineList li,
+  #dailyLogs li {
+    padding: 14px;
+    border-radius: 14px;
+  }
+}
